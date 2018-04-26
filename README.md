@@ -13,7 +13,7 @@ After some basic Google-ing, just importing the `base64` library in the `app_fil
 
 # Quick Bits
 
-This exercise made me realize that there is not proportional relation between the depth of the network and prediction accuracy, my inital setup had much more layers but struggled to improve accuracy beyond 85%, but then trimming the layers pushed the accuracy to 98%+
+This exercise made me realize that there is no proportional relation between the depth of the network and prediction accuracy, my inital setup had much more layers but struggled to improve accuracy beyond 85%, but then trimming the layers pushed the accuracy to 98%+
 
 # To use your Keras model driven MNIST recoginition app on your local computer simply clone the directory:
 
