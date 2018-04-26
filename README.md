@@ -1,52 +1,24 @@
-# KerasMNIST
+# Deploying Your Keras Model To Production - Part I
 
-Inspired by Siraj Raval's video on YouTube about deploying your Keras model to production 
+This implementation is inspired by Siraj Raval's You Tube video about deploying your Keras model to production. 
 
-Had initial challenges in cloning and running the code, after researching made some updates to the `app_file.py`
+# How this is different from Siraj's Code?
 
-To use your Keras model driven MNIST recoginition app on your local computer simply clone the directory:
+[1] Initially has faced some challenges in cloning and running the code as is. 
+The code would generally break for me around:
+`imgstr = re.search(b'base64,(.*)', imgData).group(1)`
+After some basic Google-ing, just importing the `base64` library in the `app_file.py` did the trick.
+
+[2] This implementation has been trained on scenarios for user to draw numbers not just at the canvas center / or maintain a specific size, i.e. the implementation should ideally recognize digits drawn also on the sides with varing sizes
+
+# Quick Bits
+
+This exercise made me realize that there is not proportional relation between the depth of the network and prediction accuracy, my inital setup had much more layers but struggled to improve accuracy beyond 85%, but then trimming the layers pushed the accuracy to 98%+
+
+# To use your Keras model driven MNIST recoginition app on your local computer simply clone the directory:
 
 `git clone https://github.com/AnuragHalder/KerasMNIST.git`
 
 This will create a new directory for you `KerasMNIST`, please go into this directory and run the following command:
 
 `python app_file.py` 
-
-Here is a quick representation of the model used
-
-Layer (type)                 Output Shape              Param #   
-=================================================================
-conv2d_1 (Conv2D)            (None, 28, 28, 32)        320       
-_________________________________________________________________
-dropout_1 (Dropout)          (None, 28, 28, 32)        0         
-_________________________________________________________________
-conv2d_2 (Conv2D)            (None, 28, 28, 32)        9248      
-_________________________________________________________________
-max_pooling2d_1 (MaxPooling2 (None, 14, 14, 32)        0         
-_________________________________________________________________
-conv2d_3 (Conv2D)            (None, 14, 14, 64)        18496     
-_________________________________________________________________
-dropout_2 (Dropout)          (None, 14, 14, 64)        0         
-_________________________________________________________________
-conv2d_4 (Conv2D)            (None, 14, 14, 64)        36928     
-_________________________________________________________________
-max_pooling2d_2 (MaxPooling2 (None, 7, 7, 64)          0         
-_________________________________________________________________
-flatten_1 (Flatten)          (None, 3136)              0         
-_________________________________________________________________
-dense_1 (Dense)              (None, 1024)              3212288   
-_________________________________________________________________
-dropout_3 (Dropout)          (None, 1024)              0         
-_________________________________________________________________
-dense_2 (Dense)              (None, 512)               524800    
-_________________________________________________________________
-dropout_4 (Dropout)          (None, 512)               0         
-_________________________________________________________________
-dense_3 (Dense)              (None, 10)                5130      
-=================================================================
-Total params: 3,807,210
-Trainable params: 3,807,210
-Non-trainable params: 0
-_________________________________________________________________
-
-Test_Accuracy:  0.9921
