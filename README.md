@@ -22,3 +22,8 @@ This exercise made me realize that there is not proportional relation between th
 This will create a new directory for you `KerasMNIST`, please go into this directory and run the following command:
 
 `python app_file.py` 
+
+[A Quick Video Demo On You Tube](https://www.youtube.com/watch?v=LFzcnRVCUYQ&feature=youtu.be)
+
+![Example](https://ibb.co/hkTypH)
+
