@@ -1,6 +1,9 @@
 # Deploying Your Keras Model To Production - Part I
 
 This implementation is inspired by Siraj Raval's You Tube video about deploying your Keras model to production. 
+https://github.com/llSourcell/how_to_deploy_a_keras_model_to_production
+
+https://www.youtube.com/watch?v=f6Bf3gl4hWY
 
 # How this is different from Siraj's Code?
 
