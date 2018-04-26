@@ -23,7 +23,7 @@ This will create a new directory for you `KerasMNIST`, please go into this direc
 
 `python app_file.py` 
 
-[A Quick Video Demo On You Tube](https://www.youtube.com/watch?v=LFzcnRVCUYQ&feature=youtu.be)
+[Click Here For A Quick Video Demo On YouTube](https://www.youtube.com/watch?v=LFzcnRVCUYQ&feature=youtu.be)
 
 ![Example](https://github.com/AnuragHalder/KerasMNIST/blob/master/two.png)
 
