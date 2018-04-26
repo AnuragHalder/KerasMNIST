@@ -25,5 +25,5 @@ This will create a new directory for you `KerasMNIST`, please go into this direc
 
 [A Quick Video Demo On You Tube](https://www.youtube.com/watch?v=LFzcnRVCUYQ&feature=youtu.be)
 
-![Example](https://ibb.co/hkTypH)
+![Example](https://github.com/AnuragHalder/KerasMNIST/blob/master/two.png)
 
